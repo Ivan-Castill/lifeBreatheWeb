@@ -1,0 +1,78 @@
+/* General: Define estilos consistentes para el cuerpo */
+body {
+    font-family: "Alumni Sans", serif; /* Usa la fuente consistente */
+}
+
+/* Barra de encabezado fija */
+.header {
+    font-family: "Alumni Sans", serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho de la página */
+    background-color: #08afff; /* Color de fondo general para la barra */
+    display: flex;
+    flex-direction: column; /* Organiza las secciones en columna */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+}
+
+/* Sección de noticias */
+.noticiaDia {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 1px;
+    border-bottom: 1px solid #ddd; /* Línea divisoria */
+    font-weight: bold;
+}
+
+/* Sección del logo */
+.barraLogo {
+    background-color: #08afff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+/* Barra de opciones */
+.itemsOpciones {
+    background-color: #7de0fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd; /* Línea divisoria superior */
+}
+.logo{
+    width: 100px;
+    margin-right:  20px;
+}
+/* Estilo de lista de opciones */
+.items {
+    display: flex;
+    gap: 15px; /* Espaciado uniforme entre elementos */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de enlaces */
+.items a {
+    text-decoration: none;
+    color: white;
+    font-family: "Alumni Sans", serif;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Transición suave */
+    font-weight: bold;
+}
+
+.items a:hover {
+    color: #037efc; /* Cambia el color al pasar el ratón */
+}
+
+/* Espaciado para el contenido principal */
+main {
+    margin-top: 120px; /* Ajusta según la altura del encabezado */
+    padding: 20px;
+}
