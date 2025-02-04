@@ -65,7 +65,7 @@ const ClimaActual = ({ ciudad = "Quito" }) => {
   }
 
   return (
-    <div style={{ fontWeight:'bold',fontSize:'20px',textAlign: "center", padding: "20px", backgroundColor: "#e2cbaf", borderRadius: "10px", width: "400px", margin: "auto" }}>
+    <div style={{ fontWeight:'bold',fontSize:'20px',textAlign: "center", padding: "20px", backgroundColor: "#e2cbaf", borderRadius: "10px", width: "300px", margin: "auto" }}>
       <h2>{clima.ciudad}</h2>
       
       <img src={obtenerGif(clima.icono)} alt="Clima actual" style={{ width: "200px", height: "200px", borderRadius: "10px" }} />

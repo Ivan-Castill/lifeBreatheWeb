@@ -8,9 +8,10 @@ function Navbar(){
             <div><img src={logo} alt="" className="logo"/></div>
             <h1>LifeBreathe</h1>
             <ul className="items">
-                <li><Link to='/'>Pronostico del día</Link></li>
-                <li><Link to='/'>Recomendaciones</Link></li>
-                <li><Link to="/">Composición del Aire</Link></li>
+            <li><a href="#header">Inicio</a></li>
+            <li><a href="#clima">Datos del Aire</a></li>
+            <li><a href="#recomendaciones">Recomendaciones para la salud</a></li>
+            <li><a href="#compocision">Composicion del Aire</a></li>
             </ul>
             <Outlet/>
         </nav>

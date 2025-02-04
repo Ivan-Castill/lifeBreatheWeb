@@ -27,6 +27,7 @@
   color: rgb(255, 255, 255);
   padding: 15px;
   border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.548);
 }
 
 .air-quality-title h2 {
@@ -39,7 +40,7 @@
   padding: 20px;
   border-radius: 10px;
   background-color: #e2cbaf;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.548);
   display: flex;
 }
 
@@ -65,6 +66,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añadimos sombra para un efecto más moderno */
   margin-top: 10px; /* Separación superior para darle espacio */
   margin-right: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.548);
 }
 
 /* Recomendaciones y gifs */

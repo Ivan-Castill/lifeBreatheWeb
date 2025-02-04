@@ -25,13 +25,17 @@ const LocationMap = () => {
   }, []);
 
   return (
+    <div>
+      <section className='fondo'>
+        <p>Ubicacion de Usuario</p>
     <div className="Ubicacion">
+      
       {error && <p>Error: {error}</p>}
       {location ? (
         <MapContainer
           center={[location.latitude, location.longitude]}
           zoom={13}
-          style={{ height: '200px', width: '400px' }}
+          style={{ height: '400px', width: '300px' }}
         >
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -56,6 +60,8 @@ const LocationMap = () => {
       ) : (
         <p>Cargando ubicación...</p>
       )}
+    </div>
+    </section>
     </div>
   );
 };

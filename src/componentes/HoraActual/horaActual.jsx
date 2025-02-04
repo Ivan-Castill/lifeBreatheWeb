@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./horaActual.css";
-import UbicacionUser from '../UbicacionUser/ubicacion'
+
 
 const HoraActual = () => {
   const [hora, setHora] = useState("");
@@ -38,12 +38,8 @@ const HoraActual = () => {
 
   return (
     <div className="hora-contenedor">
-      <p className="hora-actual">{hora}</p>
       {gif && <img src={gif} alt="GIF del momento del día" className="hora-gif" />}
-      <p>Ubicacion</p>
-      <div className="ubicacion">
-      <UbicacionUser/>
-      </div>
+      <p className="hora-actual">{hora}</p>
     </div>
   );
 };

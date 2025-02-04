@@ -56,7 +56,7 @@ const LocationMap = () => {
   };
 
   return (
-    <div style={{ alignItems:'center',textAlign: 'center', padding: '20px', backgroundColor: '#e2cbaf', borderRadius: '10px', width: '400px',height: '475px', margin: 'auto' }}>
+    <div style={{ alignItems:'center',textAlign: 'center', padding: '20px', backgroundColor: '#e2cbaf', borderRadius: '10px', width: '300px',height: '475px', margin: 'auto' }}>
       {error && <p>Error: {error}</p>}
       {location ? (
         airQuality ? (
