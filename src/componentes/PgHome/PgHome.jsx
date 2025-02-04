@@ -1,6 +1,5 @@
 import React from 'react'
 import ClimaReport from '../ClimaReport/ClimaReport'
-import RecomendacionesDia from '../recomendacionDia/recomendacionesDia'
 import NavBar from '../NavBar/NavBar'
 import Calendar from '../calendario/calendario'
 import UbicacionUser from '../UbicacionUser/ubicacion'
