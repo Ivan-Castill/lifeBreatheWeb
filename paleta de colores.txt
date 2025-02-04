@@ -1,5 +1,5 @@
-.color1 {color: #037efc;}
-.color2 {color: #08afff;}
-.color3 {color: #7de0fd;}
-.color4 {color: #d2fef7;}
-.color5 {color: #fffbf4;}
+.color1 {color: #4e3b4b;}
+.color2 {color: #6a4d59;}
+.color3 {color: #946f72;}
+.color4 {color: #d39b91;}
+.color5 {color: #e2cbaf;}

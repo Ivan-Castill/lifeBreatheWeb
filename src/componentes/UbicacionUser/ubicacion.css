@@ -1,0 +1,8 @@
+.Ubicacion{
+    width: 400px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    border: 3px solid  #4e3b4b; /* Añadimos un borde azul alrededor del mapa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añadimos sombra para un efecto más moderno */
+    margin-top: 20px; /* Separación superior para darle espacio */
+}

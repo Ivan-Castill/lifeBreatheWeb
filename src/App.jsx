@@ -2,8 +2,6 @@ import React from 'react'
 import './App.css'
 import PgHome from './componentes/PgHome/PgHome'
 
-
-
 function App() {
   return (
     <div>
