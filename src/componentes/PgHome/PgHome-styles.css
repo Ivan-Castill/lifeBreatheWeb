@@ -1,6 +1,7 @@
 .ParteSuperior{
     color: black;
     width: 1900px;
+    margin-top: 200px;
 }
 .general{
     display: flex;
