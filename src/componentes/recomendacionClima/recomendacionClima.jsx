@@ -63,11 +63,11 @@ const RecomendacionesDia = ({ ciudad = "Quito" }) => {
   }
 
   return (
-    <div style={{ color:'black', textAlign: "center", padding: "15px", backgroundColor: "#d1ecf1", borderRadius: "10px", width: "1000px", margin: "auto", marginTop: "20px" }}>
-      <h3>📌 Recomendaciones del Clima</h3>
-      <ul style={{ listStyle: "none", padding: 0 }}>
+    <div className="container-fluid py-4" style={{ backgroundColor: "#d1ecf1", borderRadius: "10px" }}>
+      <h3 className="text-center">📌 Recomendaciones del Clima</h3>
+      <ul className="list-unstyled">
         {recomendaciones.map((rec, index) => (
-          <li key={index}>✅ {rec}</li>
+          <li key={index} className="mb-2">✅ {rec}</li>
         ))}
       </ul>
     </div>
@@ -75,3 +75,4 @@ const RecomendacionesDia = ({ ciudad = "Quito" }) => {
 };
 
 export default RecomendacionesDia;
+

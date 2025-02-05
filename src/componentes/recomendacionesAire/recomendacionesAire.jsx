@@ -49,46 +49,46 @@ const RecomendacionesAire = () => {
       case 1:
         return (
           <>
-            ✅ **Excelente (0-50 AQI):**  La calidad del aire es óptima.  <br/> 
-            - 🌿 Disfruta actividades al aire libre sin restricciones. <br/>  
-            - 🏃‍♂️ Perfecto para ejercicio al aire libre.<br/>   
-            - 👶 Seguro para niños, ancianos y personas con problemas respiratorios.<br/>   
+            ✅ **Excelente (0-50 AQI):** La calidad del aire es óptima. <br />
+            - 🌿 Disfruta actividades al aire libre sin restricciones. <br />
+            - 🏃‍♂️ Perfecto para ejercicio al aire libre.<br />
+            - 👶 Seguro para niños, ancianos y personas con problemas respiratorios.<br />
           </>
         );
       case 2:
         return (
           <>
-            😊 **Buena (51-100 AQI):** La calidad del aire es aceptable.<br/>   
-            - 🚴 Puedes salir sin preocupaciones, pero si eres sensible al aire, ten precaución. <br/>  
-            - 🏃‍♂️ El ejercicio al aire libre sigue siendo seguro.  <br/> 
-            - 🤧 Si tienes alergias, podrías notar molestias leves. <br/>  
+            😊 **Buena (51-100 AQI):** La calidad del aire es aceptable.<br />
+            - 🚴 Puedes salir sin preocupaciones, pero si eres sensible al aire, ten precaución. <br />
+            - 🏃‍♂️ El ejercicio al aire libre sigue siendo seguro. <br />
+            - 🤧 Si tienes alergias, podrías notar molestias leves. <br />
           </>
         );
       case 3:
         return (
           <>
-            😷 **Moderada (101-150 AQI):** La contaminación empieza a ser un problema.<br/>   
-            - 🏃‍♂️ Evita hacer ejercicio intenso al aire libre.  <br/> 
-            - 😰 Personas con asma o enfermedades respiratorias deben usar mascarilla.<br/>   
-            - 🚪 Cierra las ventanas para evitar que entre contaminación.<br/>   
+            😷 **Moderada (101-150 AQI):** La contaminación empieza a ser un problema.<br />
+            - 🏃‍♂️ Evita hacer ejercicio intenso al aire libre. <br />
+            - 😰 Personas con asma o enfermedades respiratorias deben usar mascarilla.<br />
+            - 🚪 Cierra las ventanas para evitar que entre contaminación.<br />
           </>
         );
       case 4:
         return (
           <>
-            ⚠️ **Mala (151-200 AQI):** <br/> Puede afectar a la salud de todos. <br/>  
-            - 🏠 Quédate en interiores lo más posible. <br/>  
-            - 😷 Usa mascarilla si necesitas salir. <br/>  
-            - 🏃‍♂️ Evita actividades físicas al aire libre.<br/>   
+            ⚠️ **Mala (151-200 AQI):** <br /> Puede afectar a la salud de todos. <br />
+            - 🏠 Quédate en interiores lo más posible. <br />
+            - 😷 Usa mascarilla si necesitas salir. <br />
+            - 🏃‍♂️ Evita actividades físicas al aire libre.<br />
           </>
         );
       case 5:
         return (
           <>
-            🚨 **Muy Peligrosa (201+ AQI):** Nivel de emergencia. <br/>  
-            - 🛑 Evita salir a menos que sea necesario.<br/>   
-            - 💨 Usa purificadores de aire en casa.  <br/> 
-            - 🚪 Mantén ventanas y puertas cerradas. <br/>  
+            🚨 **Muy Peligrosa (201+ AQI):** Nivel de emergencia. <br />
+            - 🛑 Evita salir a menos que sea necesario.<br />
+            - 💨 Usa purificadores de aire en casa. <br />
+            - 🚪 Mantén ventanas y puertas cerradas. <br />
           </>
         );
       default:
@@ -108,12 +108,17 @@ const RecomendacionesAire = () => {
   const recomendacion = obtenerRecomendaciones(aqi);
 
   return (
-    <div style={{ color:'black',textAlign: "center", padding: "20px", backgroundColor: "#d1ecf1", borderRadius: "10px", width: "1000px", margin: "auto", marginTop: "20px" }}>
-      <h3>📌 Recomendaciones de Calidad del Aire</h3>
-      <p>Índice de Calidad del Aire (AQI): {aqi}</p>
-      <p>🌬️ {recomendacion}</p>
+    <div className="container-fluid" style={{ backgroundColor: "#d1ecf1", borderRadius: "10px" }}>
+      <div className="row justify-content-center">
+        <div className="col-12 col-md-8">
+          <h3 className="text-center">📌 Recomendaciones de Calidad del Aire</h3>
+          <p className="text-center">Índice de Calidad del Aire (AQI): {aqi}</p>
+          <p className="text-center">🌬️ {recomendacion}</p>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default RecomendacionesAire;
+

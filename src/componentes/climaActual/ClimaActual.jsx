@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import RecomendacionesClima from "../recomendacionClima/recomendacionClima";
+import '../climaActual/ClimaActual';
 
 const ClimaActual = ({ ciudad = "Quito" }) => {
   const [clima, setClima] = useState(null);
@@ -65,15 +66,19 @@ const ClimaActual = ({ ciudad = "Quito" }) => {
   }
 
   return (
-    <div style={{ fontWeight:'bold',fontSize:'20px',textAlign: "center", padding: "20px", backgroundColor: "#e2cbaf", borderRadius: "10px", width: "300px", margin: "auto" }}>
-      <h2>{clima.ciudad}</h2>
-      
-      <img src={obtenerGif(clima.icono)} alt="Clima actual" style={{ width: "200px", height: "200px", borderRadius: "10px" }} />
-      <p>{clima.descripcion}</p>
-      <p>Temperatura: {clima.temperatura}°C</p>
-      <p>Humedad: {clima.humedad}%</p>
+    <div className="justify-content-center">
+      <div className="product-card " style={{ fontWeight: 'bold', fontSize: '20px', backgroundColor: "#e2cbaf", borderRadius: "10px", boxShadow:'0 2px 5px rgba(0, 0, 0, 0.548)'}}>
+        <h2>{clima.ciudad}</h2>
+        
+        <img src={obtenerGif(clima.icono)} alt="Clima actual" className=" clima-container " style={{ maxWidth: "200px", maxHeight: "230px" }} />
+        
+        <p>{clima.descripcion}</p>
+        <p>Temperatura: {clima.temperatura}°C</p>
+        <p>Humedad: {clima.humedad}%</p>
+      </div>
     </div>
   );
 };
 
 export default ClimaActual;
+

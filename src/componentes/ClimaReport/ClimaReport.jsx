@@ -1,12 +1,17 @@
 import React from 'react'
 import ClimaActual from "../climaActual/ClimaActual"
 
-function ClimaReport(){
+function ClimaReport() {
     return (
-        <div style={{ textAlign: "center", fontFamily: "Arial", }}>
-            <ClimaActual ciudad="Quito" />
+        <div>
+            <div className="product-card">
+                <div>
+                    <ClimaActual ciudad="Quito" />
+                </div>
+            </div>
         </div>
     )
 }
 
 export default ClimaReport
+

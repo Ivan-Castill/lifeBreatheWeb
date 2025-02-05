@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import '../calidaddelAire/calidaddelAire'
 
 const LocationMap = () => {
   const [location, setLocation] = useState(null);
@@ -56,26 +57,31 @@ const LocationMap = () => {
   };
 
   return (
-    <div style={{ alignItems:'center',textAlign: 'center', padding: '20px', backgroundColor: '#e2cbaf', borderRadius: '10px', width: '300px',height: '475px', margin: 'auto' }}>
-      {error && <p>Error: {error}</p>}
-      {location ? (
-        airQuality ? (
-          <div>
-            <img 
-              src={`/gifs/${getAirQualityInfo(airQuality).gif}`} 
-              alt="Calidad del aire"
-              style={{ width: '200px', height: '200px', borderRadius: '10px', marginTop:'80px' }}
-            />
-            <p style={{ fontSize: '18px', fontWeight: 'bold' }}>{getAirQualityInfo(airQuality).text}</p>
+    <div className="product-card">
+          <div style={{backgroundColor: '#e2cbaf', borderRadius: '10px', width:'323px', boxShadow:'0 2px 5px rgba(0, 0, 0, 0.548)', justifyContent: 'center'}}>
+            {error && <p>Error: {error}</p>}
+            {location ? (
+              airQuality ? (
+                <div>
+                  <img 
+                    src={`/gifs/${getAirQualityInfo(airQuality).gif}`} 
+                    alt="Calidad del aire"
+                    className="img-fluid" 
+                  />
+                  <p style={{ fontSize: '16px', fontWeight: 'bold', textAlign: 'center' }}>
+                    {getAirQualityInfo(airQuality).text}
+                  </p>
+                </div>
+              ) : (
+                <p>Cargando calidad del aire...</p>
+              )
+            ) : (
+              <p>Cargando ubicación...</p>
+            )}
           </div>
-        ) : (
-          <p>Cargando calidad del aire...</p>
-        )
-      ) : (
-        <p>Cargando ubicación...</p>
-      )}
-    </div>
+        </div>
   );
 };
 
 export default LocationMap;
+

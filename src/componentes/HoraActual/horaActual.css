@@ -1,13 +1,12 @@
-.hora-contenedor {
+.product-card .card {
     text-align: center;
-    padding: 10px;
     background-color: #e2cbaf;
     border-radius: 10px;
-    height: 495px;
-    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.548);
+    padding-bottom: 25px;
   }
   
-  .hora-actual {
+  .hora-actual  {
     font-size: 2rem;
     font-weight: bold;
     color: black;
@@ -17,9 +16,10 @@
   }
   
   .hora-gif {
-    width: 200px; /* Ajusta el tamaño del GIF */
-    height: 200px;
+     /* Ajusta el tamaño del GIF */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 100px;
+    margin: 15px;
+    margin-top: 95px;
+    justify-content: center;
   }

@@ -1,12 +1,12 @@
 /* Estilo para el contenedor general */
-.app-container {
-  display: flex;
+.container-fluid {
   flex-direction: column;
-  padding: 20px;
+  justify-content: center;
 }
 
 /* Estilo para el contenido principal */
 .main-content {
+  display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: -50px;
@@ -42,6 +42,8 @@
   background-color: #e2cbaf;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.548);
   display: flex;
+  flex-direction: column; /* Asegura que los párrafos se apilen verticalmente */
+  margin-bottom: 50px;
 }
 
 .air-quality-data p {
@@ -73,8 +75,8 @@
 .air-quality-gif {
   text-align: center;
   margin-top: 20px;
-
 }
+
 .air-quality-gif img {
   width: 200px;  /* Ajusta el tamaño al valor que prefieras */
   height: auto;  /* Mantiene la proporción del GIF */
@@ -88,6 +90,7 @@
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 500px;
+  margin: 0 auto; /* Centra el contenedor en pantallas grandes */
 }
 
 /* Recomendaciones detalladas */
@@ -124,6 +127,10 @@
     flex: 1;
     margin-left: 20px;
   }
+
+  .air-quality-recommendations {
+    width: 100%; /* Hace que las recomendaciones usen todo el ancho disponible en pantallas grandes */
+  }
 }
 
 @media (max-width: 768px) {
@@ -134,4 +141,14 @@
   .map-container {
     margin-top: 20px;
   }
+
+  .air-quality-recommendations {
+    width: 100%; /* Hace que las recomendaciones usen todo el ancho disponible en pantallas pequeñas */
+    margin: 10px 0;
+  }
+
+  .air-quality-gif img {
+    width: 150px; /* Ajuste de tamaño en pantallas pequeñas */
+  }
 }
+

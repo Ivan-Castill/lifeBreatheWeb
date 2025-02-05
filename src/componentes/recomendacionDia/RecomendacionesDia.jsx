@@ -26,11 +26,15 @@ const RecomendacionesDia = ({ temperatura, humedad, descripcion }) => {
   };
 
   return (
-    <div className="recomendaciones-dia">
-      <h3>Recomendaciones para el día:</h3>
-      <p>Clima: {descripcion}</p>
-      <p>{obtenerRecomendacionTemperatura()}</p>
-      <p>{obtenerRecomendacionHumedad()}</p>
+    <div className="container recomendaciones-dia">
+      <div className="row">
+        <div className="col-12 col-md-8">
+          <h3>Recomendaciones para el día:</h3>
+          <p><strong>Clima:</strong> {descripcion}</p>
+          <p>{obtenerRecomendacionTemperatura()}</p>
+          <p>{obtenerRecomendacionHumedad()}</p>
+        </div>
+      </div>
     </div>
   );
 };

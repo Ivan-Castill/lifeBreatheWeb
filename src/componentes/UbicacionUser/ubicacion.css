@@ -1,19 +1,41 @@
-.Ubicacion{
+.product-card .Ubicacion {
     border-radius: 10px;
     background-color: #f0f0f0;
-    border: 3px solid  #4e3b4b; /* Añadimos un borde azul alrededor del mapa */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añadimos sombra para un efecto más moderno */
-    margin-top: 20px; /* Separación superior para darle espacio */
+    border: 3px solid #4e3b4b; /* Borde alrededor del mapa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto moderno */
     text-align: center;
     margin: 10px;
+    padding: 10px; /* Espaciado interno */
 }
-.fondo{
+
+/* Ajustes de la sección de fondo */
+.fondo {
     text-align: center;
-    height: 495px;
+    height: 370px;
     padding: 10px;
     background-color: #e2cbaf;
     border-radius: 10px;
-    margin-left: 10px;
-    margin-top: 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.548);
+}
+
+/* Hacer que el mapa sea responsive */
+.product-card .mapa {
+    height: 250px; /* Altura predeterminada del mapa */
+    width: 100%; /* El mapa ocupa el 100% del ancho disponible */
+    max-width: 400px; /* Tamaño máximo para evitar que se haga demasiado grande */
+    margin: 0 auto; /* Centra el mapa */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 500px) {
+    .product-card .mapa {
+        height: 200px; /* Reducir la altura del mapa en pantallas pequeñas */
+    }
+}
+
+/* Opcional: Ajuste para pantallas muy pequeñas */
+@media (max-width: 300px) {
+    .product-card .mapa {
+        height: 200px; /* Altura más pequeña en pantallas muy pequeñas */
+    }
 }

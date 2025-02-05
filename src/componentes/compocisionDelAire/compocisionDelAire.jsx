@@ -9,7 +9,6 @@ const CalidadDelAire = () => {
   const [lat, setLat] = useState(null);
   const [lon, setLon] = useState(null);
 
-  // Obtener ubicación del usuario al cargar la página
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -28,7 +27,6 @@ const CalidadDelAire = () => {
     }
   }, []);
 
-  // Manejar clics en el mapa
   const MapClickHandler = () => {
     useMapEvents({
       click(e) {
@@ -39,7 +37,6 @@ const CalidadDelAire = () => {
     return null;
   };
 
-  // Obtener calidad del aire cuando las coordenadas cambien
   useEffect(() => {
     if (lat !== null && lon !== null) {
       const fetchAirQuality = async () => {
@@ -56,7 +53,6 @@ const CalidadDelAire = () => {
     }
   }, [lat, lon]);
 
-  // Función para obtener las recomendaciones detalladas
   const obtenerRecomendaciones = (aqi) => {
     switch (aqi) {
       case 1:
@@ -130,7 +126,6 @@ const CalidadDelAire = () => {
     }
   };
 
-  // Función para obtener el GIF correspondiente
   const obtenerGifAire = (aqi) => {
     switch (aqi) {
       case 1:
@@ -149,9 +144,9 @@ const CalidadDelAire = () => {
   };
 
   return (
-    <div className="app-container">
-      <div className="main-content">
-        <div className="air-info-container">
+    <div className="container-fluid">
+      <div className="row justify-content-center">
+        <div className="col-md-10 air-info-container">
           <div className="air-quality-title">
             <h2>Informe de Calidad del Aire</h2>
           </div>
@@ -161,19 +156,17 @@ const CalidadDelAire = () => {
             {airQualityData && (
               <>
                 <div>
-                <p>Índice de Calidad del Aire (AQI): {airQualityData.list[0].main.aqi}</p>
-                <p>CO: {airQualityData.list[0].components.co} µg/m³</p>
-                <p>NO: {airQualityData.list[0].components.no} µg/m³</p>
-                <p>PM2.5: {airQualityData.list[0].components.pm2_5} µg/m³</p>
-                <p>PM10: {airQualityData.list[0].components.pm10} µg/m³</p>
+                  <p>Índice de Calidad del Aire (AQI): {airQualityData.list[0].main.aqi}</p>
+                  <p>CO: {airQualityData.list[0].components.co} µg/m³</p>
+                  <p>NO: {airQualityData.list[0].components.no} µg/m³</p>
+                  <p>PM2.5: {airQualityData.list[0].components.pm2_5} µg/m³</p>
+                  <p>PM10: {airQualityData.list[0].components.pm10} µg/m³</p>
                 </div>
-                {/* Recomendaciones detalladas */}
                 <div className="air-quality-recommendations">
                   {obtenerRecomendaciones(airQualityData.list[0].main.aqi)}
                 </div>
-                {/* Mostrar GIF según AQI */}
                 <div className="air-quality-gif">
-                  <img src={obtenerGifAire(airQualityData.list[0].main.aqi)} alt="Estado del aire" />
+                  <img src={obtenerGifAire(airQualityData.list[0].main.aqi)} alt="Estado del aire" className="img-fluid" />
                 </div>
               </>
             )}
@@ -183,8 +176,8 @@ const CalidadDelAire = () => {
         {lat === null || lon === null ? (
           <p>Cargando ubicación...</p>
         ) : (
-          <div className="map-container">
-            <MapContainer center={[lat, lon]} zoom={13} style={{ width: "100%", height: "250px" }}>
+          <div className="col-12 map-container">
+            <MapContainer center={[lat, lon]} zoom={13} style={{ width: "100%", height: "300px" }}>
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

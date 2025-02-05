@@ -37,7 +37,7 @@ const HoraActual = () => {
   }, []);
 
   return (
-    <div className="hora-contenedor">
+    <div className="product-card card justify-content-center">
       {gif && <img src={gif} alt="GIF del momento del día" className="hora-gif" />}
       <p className="hora-actual">{hora}</p>
     </div>
