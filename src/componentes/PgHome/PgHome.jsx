@@ -14,9 +14,10 @@ import './PgHome-styles.css';
 
 const PgHome = () => {
     return (
+        <section className="general">
         <div className="col-12 justify-content-center:">
-            <section className="ParteSuperior">
-                <section className="bienvenida container text-center py-5">
+            <section id='header' className="ParteSuperior">
+                <section  className="bienvenida container text-center py-5">
                     <div className="row align-items-center">
                         <div className="col-md-6">
                             <h1>LifeBreathe</h1>
@@ -71,6 +72,8 @@ const PgHome = () => {
                 <div className='mt-3'><CompocisionDeAire /></div>
             </section>
         </div>
+        <div id='footer'></div>
+        </section>
     );
 };
 

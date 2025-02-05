@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <h3>Contacto</h3>
-          <p>Email: soporte@ambientedata.com</p>
+          <p>Email: soporte@LifeBreathe.com</p>
           <p>Tel: +593 987 654 321</p>
           <p>Ubicación: Quito, Ecuador</p>
           <div className="img_sociales">

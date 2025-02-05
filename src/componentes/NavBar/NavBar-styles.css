@@ -1,34 +1,117 @@
-
+/* General styles for the navbar */
 .nav-bar {
-    background-color:rgb(255, 255, 255); /* Fondo blanco con transparencia */
+    background-color: rgb(255, 255, 255); /* Fondo blanco */
     position: fixed; /* Fija la barra en la parte superior */
-    top: 0; /* Se asegura de que esté en la parte superior */
+    top: 0;
     left: 0;
-    width: 100%;/*arca todo el ancho de la página */
-    z-index: 2000; /* Coloca el nav encima de otros elementos */
+    width: 100%;
+    z-index: 2000;
     display: flex;
     align-items: center;
+    padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(43, 42, 42, 0.1); /* Sombra para darle un poco de profundidad */
-    backdrop-filter: blur(5px); /* Efecto de desenfoque detrás del nav */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
 }
-.logo{
+
+.logo {
     width: 90px;
     margin-left: 10px;
 }
+
 .nav-bar h1 {
     font-size: 30px;
     color: rgb(0, 0, 0);
+    margin: 0;
 }
+
+/* Style for the list of menu items */
 .items {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 .items a {
     text-decoration: none;
-    margin: 10px;
+    margin: 0 15px;
     color: rgb(0, 0, 0);
     font-size: 18px;
 }
+
+/* Styles for the menu toggle (hamburger icon) */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-between;
+    width: 21px;
+    height: 15px;
+}
+
+.menu-toggle .bar {
+    background-color: black;
+    height: 3px;
+    width: 100%;
+}
+
+/* Styles for the main content */
 main {
     margin-top: 80px; /* Altura del nav-bar */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 30px; /* Ajuste del tamaño del logo */
+        margin: 0;
+    }
+
+    .nav-bar h1 {
+        font-size: 10px; /* Ajuste de tamaño del título */
+        margin-top: 10px;
+        margin-right: 10px;
+        margin: 0;
+    }
+
+    .items {
+        display: none; /* Esconde los items por defecto */
+        flex-direction: column;
+        margin: 20px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .items.open {
+        display: flex; /* Muestra los items cuando está abierto */
+    }
+
+    .items a {
+        margin: 5px 0;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    /* Mostrar el botón de hamburguesa en pantallas pequeñas */
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        padding: 5px;
+    }
+
+    .items a {
+        font-size: 14px;
+    }
 }
